@@ -1,31 +1,41 @@
 ﻿namespace RegistrationActivityService
 {
     using System;
-    using System.Configuration;
+    using System.Threading;
+    using System.Threading.Tasks;
     using MassTransit;
-    using MassTransit.AzureServiceBusTransport;
     using MassTransit.Courier;
+    using MassTransit.RabbitMqTransport;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Hosting;
     using Registration.Activities.EventRegistration;
     using Registration.Activities.LicenseVerification;
     using Registration.Activities.ProcessPayment;
-    using Topshelf;
-    using Topshelf.Logging;
+    using Serilog;
 
 
     public class RegistrationActivityService :
-        ServiceControl
+        IHostedService
     {
-        readonly LogWriter _log = HostLogger.Get<RegistrationActivityService>();
-
+        readonly ILogger _logger = Log.ForContext<RegistrationActivityService>();
+        readonly IConfiguration _configuration;
+        
         IBusControl _busControl;
 
-        public bool Start(HostControl hostControl)
+        public RegistrationActivityService(IConfiguration configuration)
         {
-            _log.Info("Creating bus...");
+            _configuration = configuration;
+        }
 
-            _busControl = Bus.Factory.CreateUsingAzureServiceBus(cfg =>
+        public async Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.Information("Creating bus...");
+
+            _busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                var host = cfg.Host(ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"], h =>
+                cfg.UseSerilog();
+                
+                var host = cfg.Host(_configuration.GetValue<Uri>("RabbitMQ.ConnectionString"), h =>
                 {
                 });
 
@@ -36,23 +46,19 @@
                 ConfigureActivity<ProcessPaymentActivity, ProcessPaymentArguments, ProcessPaymentLog>(cfg, host);
             });
 
-            _log.Info("Starting bus...");
+            _logger.Information("Starting bus...");
 
-            _busControl.Start();
-
-            return true;
+            await _busControl.StartAsync(cancellationToken);
         }
 
-        public bool Stop(HostControl hostControl)
+        public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _log.Info("Stopping bus...");
+            _logger.Information("Stopping bus...");
 
-            _busControl?.Stop();
-
-            return true;
+            await _busControl.StopAsync(cancellationToken);
         }
 
-        void ConfigureActivity<TActivity, TArguments, TLog>(IServiceBusBusFactoryConfigurator cfg, IServiceBusHost host)
+        void ConfigureActivity<TActivity, TArguments, TLog>(IRabbitMqBusFactoryConfigurator cfg, IRabbitMqHost host)
             where TActivity : class, Activity<TArguments, TLog>, new()
             where TArguments : class
             where TLog : class
@@ -62,7 +68,6 @@
             cfg.ReceiveEndpoint(host, GetCompensateActivityQueueName(typeof(TActivity)), e =>
             {
                 e.PrefetchCount = 16;
-                e.SubscribeMessageTopics = false;
                 e.CompensateActivityHost<TActivity, TLog>();
 
                 compensateAddress = e.InputAddress;
@@ -71,19 +76,17 @@
             cfg.ReceiveEndpoint(host, GetExecuteActivityQueueName(typeof(TActivity)), e =>
             {
                 e.PrefetchCount = 16;
-                e.SubscribeMessageTopics = false;
                 e.ExecuteActivityHost<TActivity, TArguments>(compensateAddress);
             });
         }
 
-        void ConfigureExecuteActivity<TActivity, TArguments>(IServiceBusBusFactoryConfigurator cfg, IServiceBusHost host)
+        void ConfigureExecuteActivity<TActivity, TArguments>(IRabbitMqBusFactoryConfigurator cfg, IRabbitMqHost host)
             where TActivity : class, ExecuteActivity<TArguments>, new()
             where TArguments : class
         {
             cfg.ReceiveEndpoint(host, GetExecuteActivityQueueName(typeof(TActivity)), e =>
             {
                 e.PrefetchCount = 16;
-                e.SubscribeMessageTopics = false;
                 e.ExecuteActivityHost<TActivity, TArguments>();
             });
         }

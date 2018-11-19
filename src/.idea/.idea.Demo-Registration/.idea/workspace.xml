@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26e95e6e-0e4a-4c73-959e-f9708ec63e30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Registration.Data/RegistrationStateMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RegistrationService/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StateService/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo-Registration.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Demo-Registration.sln.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Activities/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Activities/Registration.Activities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Activities/Registration.Activities.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Activities/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Common/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Common/Registration.Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Common/Registration.Common.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Common/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Consumers/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Consumers/Registration.Consumers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Consumers/Registration.Consumers.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Consumers/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Contracts/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Contracts/Registration.Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Contracts/Registration.Contracts.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Contracts/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/Registration.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Data/Registration.Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/RegistrationStateInstanceMap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registration.Data/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationActivityService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationActivityService/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/RegistrationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationService/RegistrationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/RegistrationService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationService/RegistrationService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationService/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationState/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationState/RegistrationState.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationState/RegistrationState.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistrationState/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StateService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/StateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StateService/StateService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/StateService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StateService/StateService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateService/packages.config" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2108700995">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="config" value="6" />
+          <entry key="cs" value="79" />
+          <entry key="csproj" value="20" />
+          <entry key="json" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="79" />
+          <entry key="Config" value="6" />
+          <entry key="Csproj" value="20" />
+          <entry key="JSON" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="config" value="2" />
+          <entry key="cs" value="2312" />
+          <entry key="csproj" value="61" />
+          <entry key="json" value="192" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="2312" />
+          <entry key="Config" value="2" />
+          <entry key="Csproj" value="61" />
+          <entry key="JSON" value="192" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StateService/StateService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+              <folding>
+                <marker date="1542611626607" expanded="true" signature="22:3337" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="35:600" ph="..." />
+                <marker date="1542611626607" expanded="true" signature="657:3335" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="939:1003" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="1078:3122" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="1408:1575" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="1899:2995" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="2064:2100" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="2410:2979" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="2672:2959" ph="{...}" />
+                <marker date="1542611626607" expanded="true" signature="3196:3329" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
+              <folding>
+                <marker date="1542610294094" expanded="true" signature="27:6515" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="40:233" ph="..." />
+                <marker date="1542610294094" expanded="true" signature="338:6513" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="473:2027" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="588:735" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="795:885" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="944:1034" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="1081:1171" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="2572:2656" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="2754:2950" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="3070:3322" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="3430:3678" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="3791:4475" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="3912:4089" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="4578:5071" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="5163:5402" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="5460:6507" ph="{...}" />
+                <marker date="1542610294094" expanded="true" signature="5675:6098" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateMap.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <folding>
+                <marker date="1542610056503" expanded="true" signature="27:952" ph="{...}" />
+                <marker date="1542610056503" expanded="true" signature="40:158" ph="..." />
+                <marker date="1542610056503" expanded="true" signature="252:950" ph="{...}" />
+                <marker date="1542610056503" expanded="true" signature="342:944" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextFactory.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+              <folding>
+                <marker date="1542610730335" expanded="true" signature="27:951" ph="{...}" />
+                <marker date="1542610730335" expanded="true" signature="40:201" ph="..." />
+                <marker date="1542610730335" expanded="true" signature="320:949" ph="{...}" />
+                <marker date="1542610730335" expanded="true" signature="403:943" ph="{...}" />
+                <marker date="1542610730335" expanded="true" signature="630:842" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <marker date="1542611515424" expanded="true" signature="27:571" ph="{...}" />
+                <marker date="1542611515424" expanded="true" signature="40:153" ph="..." />
+                <marker date="1542611515424" expanded="true" signature="268:569" ph="{...}" />
+                <marker date="1542611515424" expanded="true" signature="374:394" ph="{...}" />
+                <marker date="1542611515424" expanded="true" signature="470:563" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+              <folding>
+                <marker date="1542610774223" expanded="true" signature="27:1542" ph="{...}" />
+                <marker date="1542610774223" expanded="true" signature="40:192" ph="..." />
+                <marker date="1542610774223" expanded="true" signature="270:1540" ph="{...}" />
+                <marker date="1542610774223" expanded="true" signature="418:633" ph="{...}" />
+                <marker date="1542610774223" expanded="true" signature="702:1534" ph="{...}" />
+                <marker date="1542610774223" expanded="true" signature="772:1524" ph="{...}" />
+                <marker date="1542610774223" expanded="true" signature="1052:1509" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StateService/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <marker date="1542611405231" expanded="true" signature="22:1636" ph="{...}" />
+                <marker date="1542611405231" expanded="true" signature="35:306" ph="..." />
+                <marker date="1542611405231" expanded="true" signature="326:1634" ph="{...}" />
+                <marker date="1542611405231" expanded="true" signature="370:1628" ph="{...}" />
+                <marker date="1542611405231" expanded="true" signature="840:937" ph="{...}" />
+                <marker date="1542611405231" expanded="true" signature="993:1505" ph="{...}" />
+                <marker date="1542611405231" expanded="true" signature="1176:1376" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StateService/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateInstance.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <marker date="1542592177494" expanded="true" signature="6:35" ph="..." />
+                <marker date="1542592177494" expanded="true" signature="64:522" ph="{...}" />
+                <marker date="1542592177494" expanded="true" signature="144:520" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Registration.Data/IRegistrationStateReader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1542606850213" expanded="true" signature="27:89" ph="{...}" />
+                <marker date="1542606850213" expanded="true" signature="75:87" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ProcessRegistrationQueueName</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Registration.Consumers/SecurePaymentInfoService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Api/Models/RegistrationResponseModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationService/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationActivityService/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationActivity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationService/RegistrationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/LicenseVerification/LicenseVerificationActivity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/LicenseVerification/LicenseVerificiationArguments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationArguments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentArguments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Common/DestinationAddressExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentActivity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Api/Global.asax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateInstance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StateService/StateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/IRegistrationStateReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/Models/RegistrationModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StateService/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationReceived.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/LicenseCategory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationPaymentFailed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/LicenseCategoryType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/LicenseData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationCompleted.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/SubmitRegistration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Api/Controllers/RegistrationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/ProcessRegistration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationLicenseVerificationFailed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Consumers/ProcessRegistrationConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Consumers/ISecurePaymentInfoService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Consumers/SubmitRegistrationConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Registration.Consumers/SecurePaymentInfo.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateInstanceMap.cs" />
+        <option value="$PROJECT_DIR$/Registration.Common/Registration.Common.csproj" />
+        <option value="$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationActivity.cs" />
+        <option value="$PROJECT_DIR$/Registration.Activities/Registration.Activities.csproj" />
+        <option value="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.csproj" />
+        <option value="$PROJECT_DIR$/RegistrationService/RegistrationService.csproj" />
+        <option value="$PROJECT_DIR$/Registration.Data/Registration.Data.csproj" />
+        <option value="$PROJECT_DIR$/RegistrationActivityService/package.json" />
+        <option value="$PROJECT_DIR$/StateService/App.config" />
+        <option value="$PROJECT_DIR$/RegistrationService/RegistrationService.cs" />
+        <option value="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.cs" />
+        <option value="$PROJECT_DIR$/RegistrationService/Program.cs" />
+        <option value="$PROJECT_DIR$/RegistrationActivityService/Program.cs" />
+        <option value="$PROJECT_DIR$/StateService/appsettings.json" />
+        <option value="$PROJECT_DIR$/RegistrationService/appsettings.json" />
+        <option value="$PROJECT_DIR$/RegistrationActivityService/appsettings.json" />
+        <option value="$PROJECT_DIR$/StateService/StateService.csproj" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateEntityTypeConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateMap.cs" />
+        <option value="$PROJECT_DIR$/RegistrationState/RegistrationState.csproj" />
+        <option value="$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/SagaDbContextFactory.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextSagaDbContextFactory.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextFactory.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs" />
+        <option value="$PROJECT_DIR$/StateService/Program.cs" />
+        <option value="$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContext.cs" />
+        <option value="$PROJECT_DIR$/StateService/StateService.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/RegistrationActivityService/appsettings.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="117" />
+    <option name="y" value="70" />
+    <option name="width" value="3777" />
+    <option name="height" value="2169" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Demo-Registration" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Demo-Registration" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Demo-Registration" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Registration.Data" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Services\StateService">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Services\RegistrationActivityService" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/RegistrationActivityService/bin/Debug/netcoreapp2.1/RegistrationActivityService.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RegistrationActivityService" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Services\RegistrationService" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/RegistrationService/bin/Debug/netcoreapp2.1/RegistrationService.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RegistrationService" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/RegistrationService/RegistrationService.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Services\StateService" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/StateService/bin/Debug/netcoreapp2.1/StateService.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/StateService" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/StateService/StateService.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+      <item itemvalue=".NET Project.Services\StateService" />
+      <item itemvalue=".NET Project.Services\RegistrationService" />
+      <item itemvalue=".NET Project.Services\RegistrationActivityService" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Project.Services\StateService" />
+        <item itemvalue=".NET Project.Services\RegistrationActivityService" />
+        <item itemvalue=".NET Project.Services\RegistrationService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26e95e6e-0e4a-4c73-959e-f9708ec63e30" name="Default Changelist" comment="" />
+      <created>1542592325797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542592325797</updated>
+      <workItem from="1542592328998" duration="3504000" />
+      <workItem from="1542600265142" duration="11448000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14952000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="66" y="-7" width="2501" height="1455" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550308" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Build" weight="0.32948422" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995381" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32948422" />
+      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="REST Client" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32948422" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationActivity.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationActivity.cs" initialLine="31">
+            <startOffsets>
+              <option value="1179" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1180" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/StateService/StateService.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/StateService/StateService.cs" initialLine="36">
+            <startOffsets>
+              <option value="1101" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/LicenseData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177471" expanded="true" signature="32:166" ph="{...}" />
+            <marker date="1542592177471" expanded="true" signature="67:164" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/ProcessRegistration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177472" expanded="true" signature="32:422" ph="{...}" />
+            <marker date="1542592177472" expanded="true" signature="95:420" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationCompleted.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177473" expanded="true" signature="32:219" ph="{...}" />
+            <marker date="1542592177473" expanded="true" signature="97:217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationLicenseVerificationFailed.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177474" expanded="true" signature="32:267" ph="{...}" />
+            <marker date="1542592177474" expanded="true" signature="45:75" ph="..." />
+            <marker date="1542592177474" expanded="true" signature="136:265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationPaymentFailed.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177474" expanded="true" signature="32:255" ph="{...}" />
+            <marker date="1542592177474" expanded="true" signature="45:75" ph="..." />
+            <marker date="1542592177474" expanded="true" signature="124:253" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/RegistrationReceived.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177475" expanded="true" signature="47:418" ph="{...}" />
+            <marker date="1542592177475" expanded="true" signature="91:416" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/SubmitRegistration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177475" expanded="true" signature="47:416" ph="{...}" />
+            <marker date="1542592177475" expanded="true" signature="89:414" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/Models/RegistrationModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding>
+            <marker date="1542592177478" expanded="true" signature="34:604" ph="{...}" />
+            <marker date="1542592177478" expanded="true" signature="47:75" ph="..." />
+            <marker date="1542592177478" expanded="true" signature="141:602" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Common/DestinationAddressExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177463" expanded="true" signature="29:829" ph="{...}" />
+            <marker date="1542592177463" expanded="true" signature="42:72" ph="..." />
+            <marker date="1542592177463" expanded="true" signature="127:827" ph="{...}" />
+            <marker date="1542592177463" expanded="true" signature="228:490" ph="{...}" />
+            <marker date="1542592177463" expanded="true" signature="292:446" ph="{...}" />
+            <marker date="1542592177463" expanded="true" signature="579:821" ph="{...}" />
+            <marker date="1542592177463" expanded="true" signature="643:777" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/ISecurePaymentInfoService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177466" expanded="true" signature="32:177" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="81:175" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/ProcessRegistrationConsumer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-811">
+          <folding>
+            <marker date="1542592177466" expanded="true" signature="32:3132" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="45:233" ph="..." />
+            <marker date="1542592177466" expanded="true" signature="321:3130" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="517:603" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="683:971" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="1055:3124" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="1220:1926" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="1377:1581" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="1833:1909" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="2057:2320" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="2800:2868" ph="{...}" />
+            <marker date="1542592177466" expanded="true" signature="3013:3073" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/SecurePaymentInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177468" expanded="true" signature="32:275" ph="{...}" />
+            <marker date="1542592177468" expanded="true" signature="73:273" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/SecurePaymentInfoService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177468" expanded="true" signature="32:1032" ph="{...}" />
+            <marker date="1542592177468" expanded="true" signature="113:1030" ph="{...}" />
+            <marker date="1542592177468" expanded="true" signature="207:304" ph="{...}" />
+            <marker date="1542592177468" expanded="true" signature="357:1024" ph="{...}" />
+            <marker date="1542592177468" expanded="true" signature="499:770" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/SubmitRegistrationConsumer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <marker date="1542592177469" expanded="true" signature="32:2997" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="45:161" ph="..." />
+            <marker date="1542592177469" expanded="true" signature="247:2995" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="403:882" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="967:1207" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="1270:1881" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="1941:2989" ph="{...}" />
+            <marker date="1542592177469" expanded="true" signature="2157:2580" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationActivity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <marker date="1542592177373" expanded="true" signature="51:1785" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="64:190" ph="..." />
+            <marker date="1542592177373" expanded="true" signature="304:1783" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="491:1063" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="993:1051" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="1170:1373" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="1428:1777" ph="{...}" />
+            <marker date="1542592177373" expanded="true" signature="1514:1658" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationArguments.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177374" expanded="true" signature="51:322" ph="{...}" />
+            <marker date="1542592177374" expanded="true" signature="101:320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/EventRegistration/EventRegistrationLog.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177374" expanded="true" signature="51:214" ph="{...}" />
+            <marker date="1542592177374" expanded="true" signature="115:212" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/LicenseVerification/LicenseVerificationActivity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <marker date="1542592177375" expanded="true" signature="53:1096" ph="{...}" />
+            <marker date="1542592177375" expanded="true" signature="66:211" ph="..." />
+            <marker date="1542592177375" expanded="true" signature="315:1094" ph="{...}" />
+            <marker date="1542592177375" expanded="true" signature="507:1088" ph="{...}" />
+            <marker date="1542592177375" expanded="true" signature="719:864" ph="{...}" />
+            <marker date="1542592177375" expanded="true" signature="1006:1076" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/LicenseVerification/LicenseVerificiationArguments.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177376" expanded="true" signature="53:479" ph="{...}" />
+            <marker date="1542592177376" expanded="true" signature="106:477" ph="{...}" />
+            <marker date="1542592177376" expanded="true" signature="121:192" ph="/// Racer's license number ... " />
+            <marker date="1542592177376" expanded="true" signature="240:319" ph="/// Road, Cyclocross, MountainBike ... " />
+            <marker date="1542592177376" expanded="true" signature="363:438" ph="/// Category of racer to check ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentActivity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177377" expanded="true" signature="48:1514" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="61:206" ph="..." />
+            <marker date="1542592177377" expanded="true" signature="311:1512" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="492:897" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="641:747" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="1001:1063" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="1115:1506" ph="{...}" />
+            <marker date="1542592177377" expanded="true" signature="1190:1351" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentArguments.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177378" expanded="true" signature="48:329" ph="{...}" />
+            <marker date="1542592177378" expanded="true" signature="95:327" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/ProcessPayment/ProcessPaymentLog.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542592177379" expanded="true" signature="48:518" ph="{...}" />
+            <marker date="1542592177379" expanded="true" signature="109:516" ph="{...}" />
+            <marker date="1542592177379" expanded="true" signature="124:206" ph="/// The date the charge was processed ... " />
+            <marker date="1542592177379" expanded="true" signature="253:359" ph="/// The authorization code received from the payment provider ... " />
+            <marker date="1542592177379" expanded="true" signature="411:478" ph="/// The amount charged ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Activities/Registration.Activities.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Common/Registration.Common.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Consumers/Registration.Consumers.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Contracts/Registration.Contracts.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/Registration.Data.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateService/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationService/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationActivityService/App.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <marker date="1542608773444" expanded="true" signature="37:3648" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="50:477" ph="..." />
+            <marker date="1542608773444" expanded="true" signature="549:3646" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="801:865" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="940:1765" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="1068:1638" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="1233:1269" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="1839:1972" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="2229:2809" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="2376:2556" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="2650:2797" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="3037:3280" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="3138:3268" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="3343:3457" ph="{...}" />
+            <marker date="1542608773444" expanded="true" signature="3523:3640" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationService/RegistrationService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+          <folding>
+            <marker date="1542608829474" expanded="true" signature="29:1952" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="42:273" ph="..." />
+            <marker date="1542608829474" expanded="true" signature="337:1950" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="573:637" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="712:1736" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="840:1609" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="1005:1041" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="1155:1316" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="1431:1593" ph="{...}" />
+            <marker date="1542608829474" expanded="true" signature="1810:1944" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationService/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <marker date="1542609036901" expanded="true" signature="29:1159" ph="{...}" />
+            <marker date="1542609036901" expanded="true" signature="42:243" ph="..." />
+            <marker date="1542609036901" expanded="true" signature="263:1157" ph="{...}" />
+            <marker date="1542609036901" expanded="true" signature="307:1151" ph="{...}" />
+            <marker date="1542609036901" expanded="true" signature="777:874" ph="{...}" />
+            <marker date="1542609036901" expanded="true" signature="922:1028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationActivityService/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <marker date="1542609034383" expanded="true" signature="37:1174" ph="{...}" />
+            <marker date="1542609034383" expanded="true" signature="50:251" ph="..." />
+            <marker date="1542609034383" expanded="true" signature="270:1172" ph="{...}" />
+            <marker date="1542609034383" expanded="true" signature="314:1166" ph="{...}" />
+            <marker date="1542609034383" expanded="true" signature="784:881" ph="{...}" />
+            <marker date="1542609034383" expanded="true" signature="929:1043" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationService/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationActivityService/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationActivityService/RegistrationActivityService.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationService/RegistrationService.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateService/StateService.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationState/RegistrationState.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateMachine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
+          <folding>
+            <marker date="1542610294094" expanded="true" signature="27:6515" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="40:233" ph="..." />
+            <marker date="1542610294094" expanded="true" signature="338:6513" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="473:2027" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="588:735" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="795:885" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="944:1034" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="1081:1171" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="2572:2656" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="2754:2950" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="3070:3322" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="3430:3678" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="3791:4475" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="3912:4089" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="4578:5071" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="5163:5402" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="5460:6507" ph="{...}" />
+            <marker date="1542610294094" expanded="true" signature="5675:6098" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistrationState/RegistrationStateInstance.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <marker date="1542592177494" expanded="true" signature="6:35" ph="..." />
+            <marker date="1542592177494" expanded="true" signature="64:522" ph="{...}" />
+            <marker date="1542592177494" expanded="true" signature="144:520" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/IRegistrationStateReader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1542606850213" expanded="true" signature="27:89" ph="{...}" />
+            <marker date="1542606850213" expanded="true" signature="75:87" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateMap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <marker date="1542610056503" expanded="true" signature="27:952" ph="{...}" />
+            <marker date="1542610056503" expanded="true" signature="40:158" ph="..." />
+            <marker date="1542610056503" expanded="true" signature="252:950" ph="{...}" />
+            <marker date="1542610056503" expanded="true" signature="342:944" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateReader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <marker date="1542610774223" expanded="true" signature="27:1542" ph="{...}" />
+            <marker date="1542610774223" expanded="true" signature="40:192" ph="..." />
+            <marker date="1542610774223" expanded="true" signature="270:1540" ph="{...}" />
+            <marker date="1542610774223" expanded="true" signature="418:633" ph="{...}" />
+            <marker date="1542610774223" expanded="true" signature="702:1534" ph="{...}" />
+            <marker date="1542610774223" expanded="true" signature="772:1524" ph="{...}" />
+            <marker date="1542610774223" expanded="true" signature="1052:1509" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContextFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+          <folding>
+            <marker date="1542610730335" expanded="true" signature="27:951" ph="{...}" />
+            <marker date="1542610730335" expanded="true" signature="40:201" ph="..." />
+            <marker date="1542610730335" expanded="true" signature="320:949" ph="{...}" />
+            <marker date="1542610730335" expanded="true" signature="403:943" ph="{...}" />
+            <marker date="1542610730335" expanded="true" signature="630:842" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateService/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateService/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <marker date="1542611405231" expanded="true" signature="22:1636" ph="{...}" />
+            <marker date="1542611405231" expanded="true" signature="35:306" ph="..." />
+            <marker date="1542611405231" expanded="true" signature="326:1634" ph="{...}" />
+            <marker date="1542611405231" expanded="true" signature="370:1628" ph="{...}" />
+            <marker date="1542611405231" expanded="true" signature="840:937" ph="{...}" />
+            <marker date="1542611405231" expanded="true" signature="993:1505" ph="{...}" />
+            <marker date="1542611405231" expanded="true" signature="1176:1376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registration.Data/RegistrationStateSagaDbContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <marker date="1542611515424" expanded="true" signature="27:571" ph="{...}" />
+            <marker date="1542611515424" expanded="true" signature="40:153" ph="..." />
+            <marker date="1542611515424" expanded="true" signature="268:569" ph="{...}" />
+            <marker date="1542611515424" expanded="true" signature="374:394" ph="{...}" />
+            <marker date="1542611515424" expanded="true" signature="470:563" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateService/StateService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <marker date="1542611626607" expanded="true" signature="22:3337" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="35:600" ph="..." />
+            <marker date="1542611626607" expanded="true" signature="657:3335" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="939:1003" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="1078:3122" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="1408:1575" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="1899:2995" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="2064:2100" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="2410:2979" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="2672:2959" ph="{...}" />
+            <marker date="1542611626607" expanded="true" signature="3196:3329" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

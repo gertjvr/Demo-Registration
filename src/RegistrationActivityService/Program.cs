@@ -1,47 +1,39 @@
 ﻿namespace RegistrationActivityService
 {
     using System.IO;
-    using System.Text;
-    using log4net.Config;
-    using MassTransit.Log4NetIntegration.Logging;
-    using Topshelf;
-    using Topshelf.Logging;
-
+    using System.Threading.Tasks;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+    using Serilog;
 
     class Program
     {
-        static int Main()
+        static async Task<int> Main()
         {
-            ConfigureLogger();
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+            
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
+            
+            var builder = new HostBuilder()
+                .ConfigureHostConfiguration(context =>
+                {
+                    context.AddConfiguration(configuration);
+                })
+                .ConfigureServices(services =>
+                {
+                    services.AddHostedService<RegistrationActivityService>();
+                })
+                .UseSerilog();
 
-            // Topshelf to use Log4Net
-            Log4NetLogWriterFactory.Use();
-
-            // MassTransit to use Log4Net
-            Log4NetLogger.Use();
-
-            return (int)HostFactory.Run(x => x.Service<RegistrationActivityService>());
-        }
-
-        static void ConfigureLogger()
-        {
-            const string logConfig = @"<?xml version=""1.0"" encoding=""utf-8"" ?>
-<log4net>
-  <root>
-    <level value=""INFO"" />
-    <appender-ref ref=""console"" />
-  </root>
-  <appender name=""console"" type=""log4net.Appender.ColoredConsoleAppender"">
-    <layout type=""log4net.Layout.PatternLayout"">
-      <conversionPattern value=""%m%n"" />
-    </layout>
-  </appender>
-</log4net>";
-
-            using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(logConfig)))
-            {
-                XmlConfigurator.Configure(stream);
-            }
+            await builder.RunConsoleAsync();
+            
+            return 0;
         }
     }
 }

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\dev\oss\Demo-Registration\src" t="IncludeFlat">
+      <e p="Demo-Registration.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Registration.Activities" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="EventRegistration" t="Include">
+          <e p="EventRegistrationActivity.cs" t="Include" />
+          <e p="EventRegistrationArguments.cs" t="Include" />
+          <e p="EventRegistrationLog.cs" t="Include" />
+        </e>
+        <e p="LicenseVerification" t="Include">
+          <e p="LicenseVerificationActivity.cs" t="Include" />
+          <e p="LicenseVerificiationArguments.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Registration.Activities.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProcessPayment" t="Include">
+          <e p="ProcessPaymentActivity.cs" t="Include" />
+          <e p="ProcessPaymentArguments.cs" t="Include" />
+          <e p="ProcessPaymentLog.cs" t="Include" />
+        </e>
+        <e p="Registration.Activities.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Registration.Api" t="IncludeRecursive">
+        <e p="Registration.Api.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Registration.Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DestinationAddressExtensions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Registration.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Registration.Common.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Registration.Consumers" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ISecurePaymentInfoService.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Registration.Consumers.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProcessRegistrationConsumer.cs" t="Include" />
+        <e p="Registration.Consumers.csproj" t="IncludeRecursive" />
+        <e p="SecurePaymentInfo.cs" t="Include" />
+        <e p="SecurePaymentInfoService.cs" t="Include" />
+        <e p="SubmitRegistrationConsumer.cs" t="Include" />
+      </e>
+      <e p="Registration.Contracts" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LicenseCategory.cs" t="Include" />
+        <e p="LicenseCategoryType.cs" t="Include" />
+        <e p="LicenseData.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Registration.Contracts.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProcessRegistration.cs" t="Include" />
+        <e p="Registration.Contracts.csproj" t="IncludeRecursive" />
+        <e p="RegistrationCompleted.cs" t="Include" />
+        <e p="RegistrationLicenseVerificationFailed.cs" t="Include" />
+        <e p="RegistrationPaymentFailed.cs" t="Include" />
+        <e p="RegistrationReceived.cs" t="Include" />
+        <e p="SubmitRegistration.cs" t="Include" />
+      </e>
+      <e p="Registration.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IRegistrationStateReader.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="RegistrationModel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Registration.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Registration.Data.csproj" t="IncludeRecursive" />
+        <e p="RegistrationStateMap.cs" t="Include" />
+        <e p="RegistrationStateReader.cs" t="Include" />
+        <e p="RegistrationStateSagaDbContext.cs" t="Include" />
+        <e p="RegistrationStateSagaDbContextFactory.cs" t="Include" />
+      </e>
+      <e p="RegistrationActivityService" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="RegistrationActivityService.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="RegistrationActivityService.cs" t="Include" />
+        <e p="RegistrationActivityService.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="RegistrationService" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="RegistrationService.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="RegistrationService.cs" t="Include" />
+        <e p="RegistrationService.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="RegistrationState" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="RegistrationState.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RegistrationState.csproj" t="IncludeRecursive" />
+        <e p="RegistrationStateInstance.cs" t="Include" />
+        <e p="RegistrationStateMachine.cs" t="Include" />
+      </e>
+      <e p="Services" t="Include" />
+      <e p="StateService" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="StateService.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="StateService.cs" t="Include" />
+        <e p="StateService.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+    <e p="C:\Users\gertjvr\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\gertjvr\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\gertjvr\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gertjvr\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Demo-Registration.609637523.00" t="ExcludeRecursive" />
+  </component>
+</project>

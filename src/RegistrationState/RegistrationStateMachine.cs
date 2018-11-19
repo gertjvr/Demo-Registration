@@ -5,15 +5,15 @@
     using Automatonymous;
     using GreenPipes;
     using MassTransit;
-    using MassTransit.Logging;
     using MassTransit.Util;
     using Registration.Contracts;
+    using Serilog;
 
 
     public class RegistrationStateMachine :
         MassTransitStateMachine<RegistrationStateInstance>
     {
-        static readonly ILog _log = Logger.Get<RegistrationStateMachine>();
+        static readonly ILogger _logger = Log.ForContext<RegistrationStateMachine>();
 
         public RegistrationStateMachine()
         {
@@ -64,14 +64,14 @@
                     .TransitionTo(Received));
         }
 
-        public State Received { get; private set; }
-        public State Registered { get; private set; }
-        public State Suspended { get; private set; }
+        public State Received { get; }
+        public State Registered { get; }
+        public State Suspended { get; }
 
-        public Event<RegistrationReceived> EventRegistrationReceived { get; private set; }
-        public Event<RegistrationCompleted> EventRegistrationCompleted { get; private set; }
-        public Event<RegistrationLicenseVerificationFailed> LicenseVerificationFailed { get; private set; }
-        public Event<RegistrationPaymentFailed> PaymentFailed { get; private set; }
+        public Event<RegistrationReceived> EventRegistrationReceived { get; }
+        public Event<RegistrationCompleted> EventRegistrationCompleted { get; }
+        public Event<RegistrationLicenseVerificationFailed> LicenseVerificationFailed { get; }
+        public Event<RegistrationPaymentFailed> PaymentFailed { get; }
 
         void Initialize(BehaviorContext<RegistrationStateInstance, RegistrationReceived> context)
         {
@@ -80,37 +80,41 @@
 
         void Register(BehaviorContext<RegistrationStateInstance, RegistrationCompleted> context)
         {
-            _log.InfoFormat("Registered: {0} ({1})", context.Data.SubmissionId, context.Instance.ParticipantEmailAddress);
+            _logger.Information("Registered: {SubmissionId} ({ParticipantEmailAddress})",
+                context.Data.SubmissionId, context.Instance.ParticipantEmailAddress);
         }
 
         void InvalidLicense(BehaviorContext<RegistrationStateInstance, RegistrationLicenseVerificationFailed> context)
         {
-            _log.InfoFormat("Invalid License: {0} ({1}) - {2}", context.Data.SubmissionId, context.Instance.ParticipantLicenseNumber, context.Data.ExceptionInfo.Message);
+            _logger.Information("Invalid License: {SubmissionId} ({ParticipantLicenseNumber}) - {Message}", 
+                context.Data.SubmissionId, context.Instance.ParticipantLicenseNumber, context.Data.ExceptionInfo.Message);
         }
 
         void PaymentFailure(BehaviorContext<RegistrationStateInstance, RegistrationPaymentFailed> context)
         {
-            _log.InfoFormat("Payment Failed: {0} ({1}) - {2}", context.Data.SubmissionId, context.Instance.ParticipantEmailAddress, context.Data.ExceptionInfo.Message);
+            _logger.Information("Payment Failed: {SubmissionId} ({ParticipantEmailAddress}) - {Message}",
+                context.Data.SubmissionId, context.Instance.ParticipantEmailAddress, context.Data.ExceptionInfo.Message);
         }
 
         async Task InitiateProcessing(BehaviorContext<RegistrationStateInstance, RegistrationReceived> context)
         {
-            var registration = CreateProcessRegistration(context.Data);
-
-            Uri destinationAddress;
-            if (!EndpointConvention.TryGetDestinationAddress(registration, out destinationAddress))
+            if (!EndpointConvention.TryGetDestinationAddress<ProcessRegistration>(out var destinationAddress))
             {
                 throw new ConfigurationException($"The endpoint convention was not configured: {TypeMetadataCache<ProcessRegistration>.ShortName}");
             }
+            
+            var registration = CreateProcessRegistration(context.Data);
 
             await context.GetPayload<ConsumeContext>().Send(destinationAddress, registration).ConfigureAwait(false);
 
-            _log.InfoFormat("Processing: {0} ({1})", context.Data.SubmissionId, context.Data.ParticipantEmailAddress);
+            _logger.Information("Processing: {SubmissionId} ({ParticipantEmailAddress})",
+                context.Data.SubmissionId, context.Data.ParticipantEmailAddress);
         }
 
         static void InitializeInstance(RegistrationStateInstance instance, RegistrationReceived data)
         {
-            _log.InfoFormat("Initializing: {0} ({1})", data.SubmissionId, data.ParticipantEmailAddress);
+            _logger.Information("Initializing: {SubmissionId} ({ParticipantEmailAddress})",
+                data.SubmissionId, data.ParticipantEmailAddress);
 
             instance.ParticipantEmailAddress = data.ParticipantEmailAddress;
             instance.ParticipantLicenseNumber = data.ParticipantLicenseNumber;

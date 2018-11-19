@@ -1,10 +1,9 @@
 ﻿namespace Registration.Data
 {
     using System;
-    using System.Data.Entity;
     using System.Linq;
     using System.Threading.Tasks;
-    using MassTransit.EntityFrameworkIntegration;
+    using Microsoft.EntityFrameworkCore;
     using Models;
     using RegistrationState;
 
@@ -12,11 +11,13 @@
     public class RegistrationStateReader :
         IRegistrationStateReader
     {
-        readonly SagaDbContextFactory _sagaDbContextFactory;
+        readonly Func<RegistrationStateSagaDbContext> _sagaDbContextFactory;
 
         public RegistrationStateReader(string connectionString)
         {
-            _sagaDbContextFactory = () => new SagaDbContext<RegistrationStateInstance, RegistrationStateInstanceMap>(connectionString);
+            var contextFactory = new RegistrationStateSagaDbContextFactory(); 
+            
+            _sagaDbContextFactory = () => contextFactory.CreateDbContext(new [] { connectionString });
         }
 
         public async Task<RegistrationModel> Get(Guid submissionId)

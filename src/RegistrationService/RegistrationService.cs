@@ -1,60 +1,65 @@
 ﻿namespace RegistrationService
 {
-    using System.Configuration;
+    using System;
+    using System.Threading;
+    using System.Threading.Tasks;
     using MassTransit;
-    using MassTransit.AzureServiceBusTransport;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Hosting;
     using Registration.Consumers;
-    using Topshelf;
-    using Topshelf.Logging;
+    using Serilog;
 
 
     public class RegistrationService :
-        ServiceControl
+        IHostedService
     {
-        readonly LogWriter _log = HostLogger.Get<RegistrationService>();
-
+        readonly ILogger _logger = Log.ForContext<RegistrationService>();
+        readonly IConfiguration _configuration;
+        
         IBusControl _busControl;
 
-        public bool Start(HostControl hostControl)
+        public RegistrationService(IConfiguration configuration)
         {
-            _log.Info("Creating bus...");
+            _configuration = configuration;
+        }
 
-            _busControl = Bus.Factory.CreateUsingAzureServiceBus(cfg =>
+        public async Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.Information("Creating bus...");
+
+            _busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                var host = cfg.Host(ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"], h =>
+                cfg.UseSerilog();
+                
+                var host = cfg.Host(_configuration.GetValue<Uri>("RabbitMQ.ConnectionString"), h =>
                 {
                 });
 
-
-                cfg.ReceiveEndpoint(host, ConfigurationManager.AppSettings["SubmitRegistrationQueueName"], e =>
+                cfg.ReceiveEndpoint(host, _configuration.GetValue<string>("SubmitRegistrationQueueName"), e =>
                 {
                     e.PrefetchCount = 16;
-
+                    
                     e.Consumer<SubmitRegistrationConsumer>();
                 });
 
-                cfg.ReceiveEndpoint(host, ConfigurationManager.AppSettings["ProcessRegistrationQueueName"], e =>
+                cfg.ReceiveEndpoint(host, _configuration.GetValue<string>("ProcessRegistrationQueueName"), e =>
                 {
                     e.PrefetchCount = 16;
-
+                    
                     e.Consumer<ProcessRegistrationConsumer>();
                 });
             });
 
-            _log.Info("Starting bus...");
+            _logger.Information("Starting bus...");
 
-            _busControl.Start();
-
-            return true;
+            await _busControl.StartAsync(cancellationToken);
         }
 
-        public bool Stop(HostControl hostControl)
+        public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _log.Info("Stopping bus...");
+            _logger.Information("Stopping bus...");
 
-            _busControl?.Stop();
-
-            return true;
+            await _busControl.StartAsync(cancellationToken);
         }
     }
 }

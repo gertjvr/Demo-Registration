@@ -1,52 +1,69 @@
 ﻿namespace StateService
 {
     using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Linq;
-    using Automatonymous;
+    using System.Threading;
+    using System.Threading.Tasks;
     using GreenPipes;
     using MassTransit;
-    using MassTransit.AzureServiceBusTransport;
-    using MassTransit.EntityFrameworkIntegration;
-    using MassTransit.EntityFrameworkIntegration.Saga;
+    using MassTransit.EntityFrameworkCoreIntegration;
+    using MassTransit.EntityFrameworkCoreIntegration.Saga;
+    using MassTransit.RabbitMqTransport;
     using MassTransit.Saga;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Hosting;
     using Registration.Common;
     using Registration.Contracts;
     using Registration.Data;
     using RegistrationState;
-    using Topshelf;
-    using Topshelf.Logging;
+    using Serilog;
 
 
     public class StateService :
-        ServiceControl
+        IHostedService
     {
-        readonly LogWriter _log = HostLogger.Get<StateService>();
+        readonly ILogger _logger = Log.ForContext<StateService>();
+        readonly IConfiguration _configuration;
 
         IBusControl _busControl;
         ISagaRepository<RegistrationStateInstance> _sagaRepository;
 
-        public bool Start(HostControl hostControl)
+        public StateService(IConfiguration configuration)
         {
-            _log.Info("Creating bus...");
+            _configuration = configuration;
+        }
 
-            var connectionString = ConfigurationManager.AppSettings["DatabaseConnectionString"];
+        public async Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.Information("Creating bus...");
 
-            SagaDbContextFactory sagaDbContextFactory = () => new SagaDbContext<RegistrationStateInstance, RegistrationStateInstanceMap>(connectionString);
+            var connectionString = _configuration.GetValue<string>("DatabaseConnectionString");
 
+            var contextFactory = new RegistrationStateSagaDbContextFactory();
+
+            using (var context = contextFactory.CreateDbContext(new[] {connectionString}))
+            {
+                context.Database.Migrate();
+                
+                await context.Database.EnsureCreatedAsync(cancellationToken);
+            }
+            
+            Func<DbContext> sagaDbContextFactory = () => contextFactory.CreateDbContext(new [] { connectionString });
+            
             _sagaRepository = new EntityFrameworkSagaRepository<RegistrationStateInstance>(sagaDbContextFactory);
 
-            _busControl = Bus.Factory.CreateUsingAzureServiceBus(cfg =>
+            _busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                var host = cfg.Host(ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"], h =>
+                cfg.UseSerilog();
+                
+                var host = cfg.Host(_configuration.GetValue<Uri>("RabbitMQ.ConnectionString"), h =>
                 {
                 });
 
                 EndpointConvention.Map<ProcessRegistration>(
-                    host.Settings.ServiceUri.GetDestinationAddress(ConfigurationManager.AppSettings["ProcessRegistrationQueueName"]));
+                    host.Settings.HostAddress.GetDestinationAddress(_configuration.GetValue<string>("ProcessRegistrationQueueName")));
 
-                cfg.ReceiveEndpoint(host, ConfigurationManager.AppSettings["RegistrationStateQueueName"], e =>
+                cfg.ReceiveEndpoint(host, _configuration.GetValue<string>("RegistrationStateQueueName"), e =>
                 {
                     e.PrefetchCount = 16;
 
@@ -62,35 +79,16 @@
                 });
             });
 
-            _log.Info("Starting bus...");
+            _logger.Information("Starting bus...");
 
-            _busControl.Start();
-
-            return true;
+            await _busControl.StartAsync(cancellationToken);
         }
 
-        public bool Stop(HostControl hostControl)
+        public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _log.Info("Stopping bus...");
+            _logger.Information("Stopping bus...");
 
-            _busControl?.Stop();
-
-            return true;
-        }
-
-        public Uri GetDestinationAddress(IServiceBusHost host, string queueName)
-        {
-            IEnumerable<string> segments = new[] {host.Settings.ServiceUri.AbsolutePath.Trim('/'), queueName.Trim('/')}
-                .Where(x => x.Length > 0);
-
-            var builder = new UriBuilder
-            {
-                Scheme = host.Settings.ServiceUri.Scheme,
-                Host = host.Settings.ServiceUri.Host,
-                Path = string.Join("/", segments)
-            };
-
-            return builder.Uri;
+            await _busControl.StopAsync(cancellationToken);
         }
     }
 }
